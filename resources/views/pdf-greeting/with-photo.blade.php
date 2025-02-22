@@ -89,12 +89,27 @@
             z-index: 2;
             font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         }
+
+        .baby-photo {
+            z-index: 2;
+            position: absolute;
+            aspect-ratio: 1/1;
+            width: 15.5rem;
+            height: 15.5rem;
+            top: 23rem;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 1.5rem;
+        }
     </style>
 </head>
 
 <body>
     <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('assets/cert-images/card-with-photo.png'))) }}"
         class="image-base" />
+
+    <img class="baby-photo"
+        src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('storage/babies/w2EQsUJunQwa06DKRSEJmj7FmihTU5dLeG28eKpI.jpg'))) }}" />
 
     <div class="cert-name">Nama Lengkap</div>
     <div class="cert-parent-name">Nama dari orang tuanya</div>
