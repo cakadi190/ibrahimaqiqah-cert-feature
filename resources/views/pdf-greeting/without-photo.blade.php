@@ -66,7 +66,7 @@
 </head>
 
 <body>
-    <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('assets\cert-images\card-without-photo.png'))) }}"
+    <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('assets/cert-images/card-without-photo.png'))) }}"
         class="image-base" />
 
     <div class="cert-name">Nama Lengkap</div>
