@@ -19,15 +19,15 @@
 
         @font-face {
             font-family: 'Roca';
-            src: url("{{ storage_path('fonts/roca-heavy.ttf') }}") format('truetype');
+            src: url("{{ storage_path('fonts/roca-bold.ttf') }}") format('truetype');
             font-weight: 900;
             font-style: normal;
         }
 
         @font-face {
             font-family: 'Montserrat';
-            src: url("{{ storage_path('fonts/montserrat-regular.ttf') }}") format('truetype');
-            font-weight: 400;
+            src: url("{{ storage_path('fonts/montserrat-font.ttf') }}") format('truetype');
+            font-weight: 700;
             font-style: normal;
         }
 
@@ -54,9 +54,36 @@
         .cert-parent-name {
             position: absolute;
             width: 100%;
+            font-weight: 700;
             margin: 0 auto;
             bottom: 18.5rem;
             color: #a97420;
+            text-align: center;
+            font-size: 1.5rem;
+            z-index: 2;
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        }
+
+        .cert-birthdate {
+            position: absolute;
+            width: 100%;
+            font-weight: 700;
+            margin: 0 auto;
+            bottom: 23.5rem;
+            color: #8ba8c7;
+            text-align: center;
+            font-size: 1rem;
+            z-index: 2;
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        }
+
+        .cert-aqiqah-date {
+            position: absolute;
+            width: 100%;
+            font-weight: 700;
+            margin: 0 auto;
+            bottom: 12.5rem;
+            color: #8ba8c7;
             text-align: center;
             font-size: 1.5rem;
             z-index: 2;
@@ -71,6 +98,8 @@
 
     <div class="cert-name">Nama Lengkap</div>
     <div class="cert-parent-name">Nama dari orang tuanya</div>
+    <div class="cert-birthdate">Lahir: Kota/Kab., 01 Januari 1970</div>
+    <div class="cert-aqiqah-date">Aqiqah: Hari, 01 Januari 1970</div>
 </body>
 
 </html>
