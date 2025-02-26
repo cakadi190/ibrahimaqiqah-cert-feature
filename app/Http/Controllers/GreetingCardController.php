@@ -16,8 +16,9 @@ class GreetingCardController extends Controller
 
     public function withoutPhoto()
     {
+        // return view('pdf-greeting.without-photo');
         return Pdf::loadView('pdf-greeting.without-photo')
-            ->setPaper('a4')
+            ->setPaper('f4', 'potrait')
             ->setWarnings(false)
             ->stream();
     }

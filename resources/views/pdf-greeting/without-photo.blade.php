@@ -17,6 +17,10 @@
             -webkit-print-color-adjust: exact;
         }
 
+        @page {
+            size: 35.59cm 21.59cm;
+        }
+
         @font-face {
             font-family: 'Roca';
             src: url("{{ storage_path('fonts/roca-bold.ttf') }}") format('truetype');
@@ -38,13 +42,68 @@
             aspect-ratio: 210/297;
         }
 
+        .cardWrapper {
+            position: absolute;
+            width: 8.6343cm;
+            z-index: 2;
+            height: 10.795cm;
+        }
+
+        /** Element 0 */
+        .cardWrapper-0 {
+            left: 0.4937cm;
+            top: 0;
+        }
+
+        /** Element 1 */
+        .cardWrapper-1 {
+            left: 9.1274cm;
+            top: 0;
+        }
+
+        /** Element 2 */
+        .cardWrapper-2 {
+            left: 17.7617cm;
+            top: 0;
+        }
+
+        /** Element 3 */
+        .cardWrapper-3 {
+            left: 26.396cm;
+            top: 0;
+        }
+
+        /** Element 4 */
+        .cardWrapper-4 {
+            left: 0.4937cm;
+            top: 10.795cm;
+        }
+
+        /** Element 5 */
+        .cardWrapper-5 {
+            left: 9.1274cm;
+            top: 10.795cm;
+        }
+
+        /** Element 6 */
+        .cardWrapper-6 {
+            left: 17.7617cm;
+            top: 10.795cm;
+        }
+
+        /** Element 7 */
+        .cardWrapper-7 {
+            left: 26.396cm;
+            top: 10.795cm;
+        }
+
         .cert-name {
             position: absolute;
-            width: 100%;
             margin: 0 auto;
-            bottom: 25rem;
+            width: 8.6343cm;
+            top: 6.125cm;
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 0.4cm;
             z-index: 2;
             color: #a97420;
             font-weight: 900;
@@ -53,26 +112,26 @@
 
         .cert-parent-name {
             position: absolute;
-            width: 100%;
             font-weight: 700;
             margin: 0 auto;
-            bottom: 18.5rem;
+            width: 8.6343cm;
+            top: 7.6cm;
             color: #a97420;
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 0.25cm;
             z-index: 2;
             font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         }
 
         .cert-birthdate {
             position: absolute;
-            width: 100%;
+            width: 8.6343cm;
             font-weight: 700;
             margin: 0 auto;
-            bottom: 23.5rem;
+            top: 7cm;
             color: #8ba8c7;
             text-align: center;
-            font-size: 1rem;
+            font-size: 0.175cm;
             z-index: 2;
             font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         }
@@ -82,10 +141,10 @@
             width: 100%;
             font-weight: 700;
             margin: 0 auto;
-            bottom: 12.5rem;
+            bottom: 2cm;
             color: #8ba8c7;
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 0.25cm;
             z-index: 2;
             font-family: 'Montserrat', Arial, Helvetica, sans-serif;
         }
@@ -93,13 +152,16 @@
 </head>
 
 <body>
-    <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('assets/cert-images/card-without-photo.png'))) }}"
+    <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('assets/cert-images/aqiqah-card-without-photo.png'))) }}"
         class="image-base" />
 
-    <div class="cert-name">Nama Lengkap</div>
-    <div class="cert-parent-name">Nama dari orang tuanya</div>
-    <div class="cert-birthdate">Lahir: Kota/Kab., 01 Januari 1970</div>
-    <div class="cert-aqiqah-date">Aqiqah: Hari, 01 Januari 1970</div>
+    @for ($i = 0; $i < 8; $i++) <div class="cardWrapper cardWrapper-{{ $i }}">
+        <div class="cert-name">Nama Lengkap</div>
+        <div class="cert-parent-name">Nama dari orang tuanya</div>
+        <div class="cert-birthdate">Lahir: Kota/Kab., 01 Januari 1970</div>
+        <div class="cert-aqiqah-date">Aqiqah: Hari, 01 Januari 1970</div>
+        </div>
+        @endfor
 </body>
 
 </html>
