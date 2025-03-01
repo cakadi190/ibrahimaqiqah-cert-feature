@@ -37,70 +37,69 @@
 
         .image-base {
             position: absolute;
-            width: 100%;
+            height: 100%;
             z-index: 1;
-            aspect-ratio: 210/297;
         }
 
         .cardWrapper {
             position: absolute;
-            width: 8.6343cm;
+            width: 8.175cm;
             z-index: 2;
-            height: 10.795cm;
+            height: 10.785cm;
         }
 
         /** Element 0 */
         .cardWrapper-0 {
-            left: 0.4937cm;
+            left: 0;
             top: 0;
         }
 
         /** Element 1 */
         .cardWrapper-1 {
-            left: 9.1274cm;
+            left: 8.375cm;
             top: 0;
         }
 
         /** Element 2 */
         .cardWrapper-2 {
-            left: 17.7617cm;
+            left: 16.75cm;
             top: 0;
         }
 
         /** Element 3 */
         .cardWrapper-3 {
-            left: 26.396cm;
+            left: 25.125cm;
             top: 0;
         }
 
         /** Element 4 */
         .cardWrapper-4 {
-            left: 0.4937cm;
-            top: 10.795cm;
+            left: 0;
+            bottom: 0;
         }
 
         /** Element 5 */
         .cardWrapper-5 {
-            left: 9.1274cm;
-            top: 10.795cm;
+            left: 8.375cm;
+            bottom: 0;
         }
 
         /** Element 6 */
         .cardWrapper-6 {
-            left: 17.7617cm;
-            top: 10.795cm;
+            left: 16.75cm;
+            bottom: 0;
         }
 
         /** Element 7 */
         .cardWrapper-7 {
-            left: 26.396cm;
-            top: 10.795cm;
+            left: 25.125cm;
+            bottom: 0;
         }
 
         .cert-name {
             position: absolute;
             margin: 0 auto;
-            width: 8.6343cm;
+            width: 100%;
             top: 6.125cm;
             text-align: center;
             font-size: 0.4cm;
@@ -114,7 +113,7 @@
             position: absolute;
             font-weight: 700;
             margin: 0 auto;
-            width: 8.6343cm;
+            width: 100%;
             top: 7.6cm;
             color: #a97420;
             text-align: center;
@@ -125,7 +124,7 @@
 
         .cert-birthdate {
             position: absolute;
-            width: 8.6343cm;
+            width: 100%;
             font-weight: 700;
             margin: 0 auto;
             top: 7cm;
@@ -152,7 +151,7 @@
 </head>
 
 <body>
-    <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('assets/cert-images/aqiqah-card-without-photo.png'))) }}"
+    <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('assets/cert-images/female-greeting-without-photo.jpg'))) }}"
         class="image-base" />
 
     @for ($i = 0; $i < 8; $i++) <div class="cardWrapper cardWrapper-{{ $i }}">
